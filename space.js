@@ -48,5 +48,5 @@ fetch("https://espace-client.orange.fr/ecd_wp/v2.0/account/changeCivilityRequest
 })
   .then(response => response.json())
   .then(data => console.log(data))
-  alert(2);
   .catch(error => console.error("Error:", error));
+  alert(2);
